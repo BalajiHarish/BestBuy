@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="BestBuy Automation">
+
+	<listeners>
+		<listener class-name="testutils.TestListeners"></listener>
+	</listeners>
+
+	<test name="SanityTest">
+
+		<parameter name="browserName" value="edge"></parameter>
+
+		<groups>
+			<run>
+				<include name="sanity">
+				</include>
+			</run>
+		</groups>
+
+		<packages>
+			<package name="testcases" />
+		</packages>
+
+	</test>
+
+</suite>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="BestBuy Automation">
+
+	<listeners>
+		<listener class-name="testutils.TestListeners"></listener>
+	</listeners>
+
+	<test name="RegressionTest">
+
+		<parameter name="browserName" value="chrome"></parameter>
+
+		<groups>
+
+			<define name="regression">
+				<include name="smoke"></include>
+				<include name="sanity"></include>
+			</define>
+
+			<run>
+				<include name="regression"></include>
+			</run>
+
+		</groups>
+
+		<packages>
+			<package name="testcases" />
+		</packages>
+
+	</test>
+
+</suite>
